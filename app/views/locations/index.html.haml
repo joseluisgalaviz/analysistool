@@ -1,5 +1,10 @@
 %h1.title All Locations of Interest
 
+.map
+  %div#map
+
+%input#locations{:type => "hidden", :value => @locations_json}
+
 %table#table
   %thead
     %tr
@@ -24,3 +29,9 @@
 %p=link_to "Create new location", new_location_path
 
 %p=link_to "Delete all", destroy_all_locations_path, :method => :get, :confirm => 'Are you sure?'
+
+= javascript_include_tag '/assets/maps/OpenLayers'
+= javascript_include_tag '/assets/maps/locations'
+
+:javascript
+  initMap($("#locations").val());

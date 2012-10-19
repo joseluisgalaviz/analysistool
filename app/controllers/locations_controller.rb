@@ -2,6 +2,9 @@ class LocationsController < ApplicationController
   def index
     # get all locations in the table locations
     @locations = Location.all
+
+    # to json format
+    @locations_json = @locations.to_json
   end
 
   def new
