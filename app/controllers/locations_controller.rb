@@ -13,7 +13,7 @@ class LocationsController < ApplicationController
 
   def create
     # create a new instance variable called @location that holds a Location object built from the data the user submitted
-    @location = Location.new(params[:location])
+    @location = Location.new(location_params)
 
     # if the object saves correctly to the database
     if @location.save
@@ -35,7 +35,7 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
 
     # if the object saves correctly to the database
-    if @location.update_attributes(params[:location])
+    if @location.update_attributes(location_params)
       # redirect the user to index
       redirect_to locations_path, notice: 'Location was successfully updated.'
     else
@@ -65,5 +65,11 @@ class LocationsController < ApplicationController
 
   def show
     # default: render ’show’ template (\app\views\locations\show.html.haml)
+  end
+
+  private
+
+  def location_params
+    params.require(:location).permit(:latitude, :longitude, :description, :name)
   end
 end

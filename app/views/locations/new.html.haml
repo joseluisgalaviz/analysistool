@@ -1,6 +1,6 @@
 %h1.title Create new Location of Interest
 
-= form_tag locations_path, :method => :post do
+= form_tag locations_path, method: :post do
 
   = label :location, :latitude, 'Latitude'
   = text_field :location, :latitude

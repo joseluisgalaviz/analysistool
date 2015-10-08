@@ -1,6 +1,6 @@
 %h1.title Update existing Location
 
-= form_tag location_path(@location), :method => :put do
+= form_tag location_path(@location), method: :put do
 
   = label :location, :latitude, 'Latitude'
   = text_field :location, :latitude
