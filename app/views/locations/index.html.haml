@@ -22,7 +22,7 @@
         %td= location.longitude
         %td= location.description
         %td= link_to 'Edit', edit_location_path(location)
-        %td= link_to 'Delete', location_path(location), method: :delete, confirm: 'Are you sure?'
+        %td= link_to 'Delete', location_path(location), method: :delete, data: { confirm: 'Are you sure?' }
 
 -#%p= show_flash
 -#%p= flash[:notice]
