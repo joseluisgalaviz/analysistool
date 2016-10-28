@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -13,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20120927210553) do
 
-  create_table "locations", force: true do |t|
-    t.float  "latitude",    limit: 53, null: false
-    t.float  "longitude",   limit: 53, null: false
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "locations", force: :cascade do |t|
+    t.float  "latitude",    null: false
+    t.float  "longitude",   null: false
     t.string "name"
     t.string "description"
   end
