@@ -13,6 +13,13 @@ Analysistool::Application.routes.draw do
     end
   end
 
+
+  root 'pois#index'
+  get 'pois' => 'pois#index'
+  get 'pois/load_pois' => 'pois#index'
+  post 'pois/load_pois' => 'pois#load_pois'
+  get 'convex_hull' => 'convex_hull#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

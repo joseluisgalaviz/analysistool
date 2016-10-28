@@ -1,0 +1,27 @@
+
+<div class="formulario">
+  <div class="page-header" >
+    <h1>Points of Interest</h1>
+    <hr>
+  </div>
+
+  <div class="form-content">
+    <form method="post" action="load_pois">
+    <div class="form-group">
+     <label class="form-label" for="txtLatitude">Latitude</label>
+     <input type="text" class="form-control" name="txtLatitude" placeholder="000.000000" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="txtLongitude">Longitude</label>
+      <input type="text" class="form-control" name="txtLongitude" placeholder="000.000000" required>
+    </div>
+      <div class="form-group">
+        <label for="txtRadius" class="form-labela">Radius (mts)</label>
+        <input type="text" class="form-control" name="txtRadius" placeholder="0000" required>
+      </div>
+    <div class="form-group">
+      <input type="submit" name="btnEnviar" class="btn btn-primary btn-large" value="Get pois">
+    </div>
+    </form>
+  </div>
+</div>

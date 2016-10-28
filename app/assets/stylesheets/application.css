@@ -43,14 +43,20 @@ h1 {
     border-bottom: 1px solid DarkSlateGrey;
 }
 
-h1.title {
-    margin: 0 0 8px;
-    padding: 10px;
+.header-title {
+  width: 100%;
+}
+
+.header-title > h1 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
     background-color: #3c80ff;
     color: white;
     border-bottom: 4px solid #0012e1;
     font-size: 2em;
     font-style: normal;
+    letter-spacing: 2px;
 }
 
 table#table {
@@ -118,4 +124,128 @@ label#position {
     margin-bottom: 10px;
     width: 100%;
     height: 500px;
+}
+
+.form-label{
+
+}
+
+.formulario{
+    width: 40%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    border: solid 1px #a6a6a6;
+    text-align: center;
+    background-color: #e5e5e5;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-control{
+    margin: 10px 10px;
+    padding: 10px 5px;
+}
+
+.form-group{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-content{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.page-header,.page-header h1{
+    border: none;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.page-header hr{
+    width: 50%;
+}
+
+.btn{
+    border: solid 1px #005ce6;
+    border-radius: 3px;
+    padding: 5px 5px;
+    font-family: 'Roboto',Sans-Serif;
+    font-size: 1em;
+}
+
+
+.btn-primary{
+    background-color: #3c80ff;
+    color: white;
+    text-shadow: #333333 1px 0px;
+}
+
+.btn-small{
+    width: 10%;
+}
+
+.btn-medium{
+    width: 30%;
+}
+
+.btn-large{
+    width: 50%;
+}
+
+.table-points{
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.table-points > thead{
+     background-color: #4dc3ff;
+ }
+
+.danger > thead{
+    background-color: #ff704d;
+}
+
+.table-points > thead > tr > th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+.breadcum-nav{
+    border-bottom:  solid 5px #a6a6a6;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #e5e5e5;
+    list-style: none;
+    color: black;
+}
+.breadcum-nav > li{
+    display: inline-block;
+    color: black;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    padding-right: 5px;
+}
+
+.breadcum-nav > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.perimeter-info{
+    text-align: right;
+}
+
+.perimeter-info label{
+    font-weight: bold;
+    font-size: 1.2em;
 }

@@ -1,0 +1,12 @@
+<div id="map" class="map">
+</div>
+<input id="locations" class="locations" type="hidden" value="<%=@locations%>">
+<input id="actual" class="actual" type="hidden" value="<%=@actual%>">
+
+<%=javascript_include_tag '/assets/maps/OpenLayers'%>
+<%=javascript_include_tag '/assets/maps/locations'%>
+
+
+<script type="text/javascript" charset="utf-8">
+  initMap($("#locations").val(),$("#actual").val());
+</script>

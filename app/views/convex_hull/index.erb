@@ -1,0 +1,70 @@
+
+<div class="header-title">
+  <h1>Convex Hull</h1>
+</div>
+
+<div id="map" class="map">
+</div>
+<input id="locations" class="locations" type="hidden" value="<%= locations%>">
+
+<div class="info">
+  <h2>Convex hull points</h2>
+  <hr>
+  <table class="table-points">
+    <thead>
+    <tr>
+      <th>Location</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% convex_hull_points.each do |location| %>
+        <tr>
+          <td><%=location.name%></td>
+          <td><%=location.lat%></td>
+          <td><%=location.lon%></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="perimeter-info">
+  <label class="form-label" for="txtPerimeter">Perimeter</label>
+  <input id="txtPerimeter" type="text" class="form-control" value="<%= "%.2f"%perimeter%> Km" readonly>
+</div>
+
+
+
+<div class="info">
+  <h2>Farthest point</h2>
+  <hr>
+  <table class="table-points danger">
+    <thead>
+    <tr>
+      <th>Location</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Distance</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%=farthest.name%></td>
+          <td><%=farthest.lat%></td>
+          <td><%=farthest.lon%></td>
+          <td><%= "%.2f" % distance %> Km</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<%=javascript_include_tag '/assets/maps/OpenLayers'%>
+<%=javascript_include_tag '/assets/maps/locations'%>
+
+
+<script type="text/javascript" charset="utf-8">
+  initMapConvexHull($("#locations").val());
+</script>

@@ -2,9 +2,21 @@
   %head
     %title Analysis Tool
     = stylesheet_link_tag 'application'
+    %link{:rel=>:stylesheet_url,:type=>:"text/css",:href=>"https://fonts.googleapis.com/css?family=Roboto"}
     = javascript_include_tag 'application'
+    = favicon_link_tag 'favicon.ico'
     = csrf_meta_tags
 
 
   %body
+    %div{:class=>'breadcum'}
+      %ul{:class=>'breadcum-nav'}
+        %li
+          %a{:href=>'/locations/',:class=>'nav'}Locations
+        %li /
+        %li
+          %a{:href=>"/pois/",:class=>'nav'}Pois
+        %li /
+        %li
+          %a{:href=>"/convex_hull/",:class=>'nav'}Convex hull
     = yield
